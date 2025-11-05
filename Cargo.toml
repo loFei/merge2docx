@@ -1,0 +1,10 @@
+[package]
+name = "merge2docx"
+version = "0.1.0"
+edition = "2024"
+authors = ['necatail@hotmail.com']
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+docx-rs = "0.4.18"
+walkdir = "2.5.0"
