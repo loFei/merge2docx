@@ -51,14 +51,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     .unwrap_or_else(|_| format!("无法读取文件: {}", path.display()));
 
                 // 添加文件路径作为标题
-                // let relative_path = path.strip_prefix(input_dir).unwrap_or(path);
-                // docx = docx.add_paragraph(
-                //     Paragraph::new().add_run(
-                //         Run::new()
-                //             .add_text(format!("File: {}", relative_path.display()))
-                //             .bold(),
-                //     ),
-                // );
+                let relative_path = path.strip_prefix(input_dir).unwrap_or(path);
+                docx = docx.add_paragraph(
+                    Paragraph::new().add_run(
+                        Run::new()
+                            .add_text(format!("File: {}", relative_path.display()))
+                            .bold(),
+                    ),
+                );
 
                 // 添加文件内容（逐行处理，避免段落过长）
                 for line in content.lines() {
