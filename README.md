@@ -28,7 +28,7 @@ cargo build --release
 
 ## 🛠️ 使用方法
 ```bash
-Usage: merge_docx.exe [OPTIONS]
+Usage: merge_docx [OPTIONS]
 
 Options:
   -i, --input-dir <INPUT_DIR>      输入目录路径 [default: .]
@@ -38,6 +38,6 @@ Options:
   -V, --version                    Print version
 
 # 示例：将src目录下所有.h .cpp结尾的文件内容合并至code.docx
-merge2docx -i ./src -o code.docx -ext .h .cpp
+merge2docx -i ./src -o code.docx --ext .h .cpp
 ```
 
