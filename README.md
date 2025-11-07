@@ -25,6 +25,10 @@ git clone https://github.com/loFei/merge2docx.git
 cd merge2docx
 cargo build --release
 ```
+直接安装：
+```bash
+cargo install --git https://github.com/loFei/merge2docx.git
+```
 
 ## 🛠️ 使用方法
 ```bash
